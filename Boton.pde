@@ -1,21 +1,21 @@
 class Boton{
-  color strokeColorOn, fillColorOn, strokeColorOff, fillColorOff;
-  int xPos, yPos, size, xLim, yLim;
-  int botonID;
-  String etiqueta = "";
-  boolean estado, mostrarEtiqueta;
+  protected color strokeColorOn, fillColorOn, strokeColorOff, fillColorOff;
+  protected int xPos, yPos, size, xLim, yLim;
+  protected int botonID;
+  protected String etiqueta = "";
+  protected boolean estado, mostrarEtiqueta;
     
-  Boton(int x, int y, int s){
-     xPos = x;
-     yPos = y;
-     size = s;
-     xLim = x+s;
-     yLim = y+s;
-     estado = false; 
-     strokeColorOn = color(0,0,0);
-     fillColorOn= color(255,255,255);
-     strokeColorOff= color(0,0,0);
-     fillColorOff= color(127,127,127);
+  private Boton(int x, int y, int s){
+    this. xPos = x;
+     this.yPos = y;
+     this.size = s;
+     this.xLim = x+s;
+     this.yLim = y+s;
+     this.estado = false; 
+     this.strokeColorOn = color(0,0,0);
+     this.fillColorOn= color(255,255,255);
+     this.strokeColorOff= color(0,0,0);
+     this.fillColorOff= color(127,127,127);
   }
   
   void clic(){
@@ -49,12 +49,12 @@ class Boton{
     this.etiqueta = et;
   }
   void mostrarEtiqueta(boolean bol){
-    mostrarEtiqueta = bol;
+    this.mostrarEtiqueta = bol;
   }
   //GETTERS . . . . . . . . . 
-  boolean getEstado(){  return estado; }
-  int getXPos(){        return xPos; }
-  int getYPos(){        return yPos; }
+  boolean getEstado(){  return this.estado; }
+  int getXPos(){        return this.xPos; }
+  int getYPos(){        return this.yPos; }
   int getId(int id){    return this.botonID;}
 
   //SETTERS . . . . . . . . . 
