@@ -4,7 +4,7 @@ class Boton{
   protected int botonID;
   protected String etiqueta = "";
   protected boolean estado, mostrarEtiqueta;
-    
+  
   private Boton(int x, int y, int s){
     this. xPos = x;
      this.yPos = y;
@@ -18,6 +18,7 @@ class Boton{
      this.fillColorOff= color(127,127,127);
   }
   
+  //detecta clic dentro de los pixeles q componen el btn.
   void clic(){
     if(mouseX > xPos && mouseX < xLim &&
        mouseY > yPos && mouseY < yLim){
@@ -30,6 +31,7 @@ class Boton{
     }
   }
   
+  //dibuja el botón con los colores y elementos establecidos
   void mostrar(){
     if(estado){
       stroke(strokeColorOn);
@@ -45,12 +47,16 @@ class Boton{
       text(etiqueta,this.xPos , this.yPos, size , size);}
   }
   
+  //establece etiqueta del boton
   void setEtiqueta(String et){
     this.etiqueta = et;
   }
+  
+  //setea si se muestra o no la etiqueta
   void mostrarEtiqueta(boolean bol){
     this.mostrarEtiqueta = bol;
   }
+  
   //GETTERS . . . . . . . . . 
   boolean getEstado(){  return this.estado; }
   int getXPos(){        return this.xPos; }
