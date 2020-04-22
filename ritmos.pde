@@ -18,8 +18,8 @@ final int margenBtns= 5;
 
 void setup(){
   
-  //size(displayWidth,displayHeight,P2D);
-  size(800,600);
+  size(displayWidth,displayHeight,P2D);
+  //size(800,600);
   imageMode(CENTER);
   
   //selector determina cantidad de ritmos (1 a 3)
